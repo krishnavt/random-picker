@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { pickRandom, parseEntries } from './utils/randomizer';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
+      <Analytics />
       <div className="max-w-4xl mx-auto">
         
         <header className="text-center mb-8">
