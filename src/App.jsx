@@ -361,7 +361,7 @@ function App() {
           <section>
             <h2 className="text-lg font-bold text-gray-800 mb-2">Contact</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Have feedback or feature ideas? Email me at <a href="mailto:yourname@example.com" className="underline text-blue-600 hover:text-blue-700">yourname@example.com</a>.
+              Have feedback or feature ideas? Email me at <a href="mailto:vamsit.ms@gmail.com" className="underline text-blue-600 hover:text-blue-700">vamsit.ms@gmail.com</a>.
             </p>
           </section>
         </div>
