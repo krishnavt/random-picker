@@ -290,7 +290,7 @@ function App() {
             {teams.length > 0 && (
               <div className="mt-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-bold text-gray-800">Yourms:</h3>
+                  <h3 className="text-lg font-bold text-gray-800">Your Teams:</h3>
                   <button
                     onClick={copyAllTeams}
                     className="px-4 py-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-medium rounded-lg transition text-sm"
