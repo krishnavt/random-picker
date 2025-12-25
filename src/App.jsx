@@ -206,7 +206,7 @@ function App() {
               {isAnimating ? '🎲 Picking...' : '🎯 Pick Random'}
             </button>
 
-            {winner && !imating && (
+            {winner && !isAnimating && (
               <div className="mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-400 rounded-xl animate-bounce">
                 <p className="text-sm font-semibold text-gray-600 mb-1">Winner:</p>
                 <p className="text-4xl font-bold text-green-700 mb-3">{winner}</p>
