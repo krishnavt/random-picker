@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://random-picker-nine.vercel.app/sitemap.xml
