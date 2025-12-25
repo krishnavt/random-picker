@@ -163,7 +163,7 @@ function App() {
                 className="w-full md:w-auto px-4 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
               >
                 <option value="once">Pick Once (keep in list)</option>
-                <option value="remove">Pick and Remove</option>
+                <optionalue="remove">Pick and Remove</option>
               </select>
             </div>
 
@@ -290,7 +290,7 @@ function App() {
             {teams.length > 0 && (
               <div className="mt-6">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-bold text-gray-800">Your Teams:</h3>
+                  <h3 className="text-lg font-bold text-gray-800">Yourms:</h3>
                   <button
                     onClick={copyAllTeams}
                     className="px-4 py-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-medium rounded-lg transition text-sm"
