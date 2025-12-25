@@ -162,7 +162,7 @@ function App() {
           <section>
             <h2 className="text-lg font-bold text-gray-800 mb-1">Contact</h2>
             <p className="text-sm text-gray-700">
-              Have feedback or feature ideas? Email me at <span className="underline">yourname@example.com</span>.
+              Have feedback or feature ideas? Email me at <span className="underline">vamsit.ms@gmail.com</span>.
             </p>
           </section>
         </div>
