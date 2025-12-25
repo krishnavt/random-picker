@@ -163,7 +163,7 @@ function App() {
                 className="w-full md:w-auto px-4 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
               >
                 <option value="once">Pick Once (keep in list)</option>
-                <optionalue="remove">Pick and Remove</option>
+                <option value="remove">Pick and Remove</option>
               </select>
             </div>
 
