@@ -21,18 +21,26 @@ function App() {
     }
 
     setIsAnimating(true);
-    
+
+    // GA4 event: pick_random_click
+    if (window.gtag) {
+      window.gtag('event', 'pick_random_click', {
+        event_category: 'engagement',
+        event_label: pickMode,
+      });
+    }
+
     setTimeout(() => {
       const removeAfterPick = pickMode === 'remove';
       const selected = pickRandom(entries, 1, false);
       setWinner(selected[0]);
-      
+
       if (removeAfterPick) {
         const newEntries = entries.filter(e => e !== selected[0]);
         setEntries(newEntries);
         setInputText(newEntries.join('\n'));
       }
-      
+
       setIsAnimating(false);
     }, 1000);
   };
@@ -79,7 +87,7 @@ function App() {
             <textarea
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
-              placeholder="Alice&#10;Bob&#10;Charlie&#10;Diana"
+              placeholder={"Alice\nBob\nCharlie\nDiana"}
               className="w-full h-48 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none font-mono"
             />
             <div className="flex justify-between items-center mt-2">
@@ -127,17 +135,41 @@ function App() {
 
         <div className="bg-white rounded-xl shadow-md p-6">
           <h2 className="text-xl font-bold text-gray-800 mb-3">How to use:</h2>
-          <ol className="list-decimal list-inside space-y-2 text-gray-700">
-            <li>Type or paste names/items (one per line) in the text box above</li>
-            <li>Click "Update List" to load your entries</li>
-            <li>Choose your pick mode (keep in list or remove after picking)</li>
-            <li>Click "Pick Random" to select a winner</li>
-            <li>Use "Pick and Remove" mode for multiple rounds of selection</li>
+          <ol className="list-decimal list-inside space-y-2 tey-700">
+            <li>Type or paste names/items (one per line) in the text box above.</li>
+            <li>Click "Update List" to load your entries.</li>
+            <li>Choose your pick mode (keep in list or remove after picking).</li>
+            <li>Click "Pick Random" to select a winner.</li>
+            <li>Use "Pick and Remove" mode for multiple rounds of selection.</li>
           </ol>
         </div>
 
+        <div className="bg-white rounded-xl shadow-md p-6 mt-6 space-y-4">
+          <section>
+            <h2 className="text-lg font-bold text-gray-800 mb-1">About</h2>
+            <p className="text-sm text-gray-700">
+              Random Picker is a simple tool for teachers, hosts, and creators who need a fair way to pick names or items from a list.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-bold text-gray-800 mb-1">Privacy</h2>
+            <p className="text-sm text-gray-700">
+              Names you enter never leave your browser. We use Google Analytics 4 to collect anonymous usage stats to improve the tool.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-bold text-gray-800 mb-1">Contact</h2>
+            <p className="text-sm text-gray-700">
+              Have feedback or feature ideas? Email me at <span className="underline">yourname@example.com</span>.
+            </p>
+          </section>
+        </div>
+
         <footer className="text-center mt-8 text-gray-600 text-sm">
-          <p>Free Random Picker Tool • No signup required • Fair & unbiased</p>
+          <p>Free Random Picker Tool • No signup required • Fair &amp; unbiased</p>
+          <p className="mt-1">&copy; {new Date().getFullYear()} Random Picker by Vamsi</p>
         </footer>
 
       </div>
